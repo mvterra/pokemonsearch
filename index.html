@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Searcher</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="pokeball.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding:0;
+        }
+        body{
+            background:rgb(61, 96, 201);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+            height:100vh;
+        }
+        #city{
+            display:block;
+            width: 250px;
+            height:35px;
+            padding:10px;
+            border-radius:5px;
+            margin:15px;
+            border:0;
+            font-size:1.2rem;
+        }
+        #city:hover,#city:focus{
+            box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            outline:0;
+        }
+        .container{
+            width:400px;
+            height:200px;
+            /* border:3px solid black; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius:25px;
+            margin:20px;
+            background:rgba(10, 38, 121,0.5);
+        }
+        button{
+            padding:10px;
+            width:250px;
+            border-radius:5px;
+            background:rgb(10, 38, 121);
+            color:white;
+            font-weight:bold;
+            border:0;
+            font-family:'Press Start 2P';
+        }
+        button:hover{
+            cursor:pointer;
+            background: rgb(13, 48, 150)
+        }
+        button:active{
+            background: rgb(10, 38, 121)
+        }
+        button:focus{
+            outline:0
+        }
+        label{
+            font-size:1rem;
+            font-family: arial;
+            font-weight: bold;
+            font-family:'Press Start 2P';
+            margin:5px;
+            text-align:center;
+            line-height: 1.8rem;
+            color:white;
+        }
+        .imgContainer{            
+            display:flex;
+            flex-direction: center;
+            justify-content: center;
+            padding:20px;
+            border-radius:10%
+            
+        }
+        .temperature{
+            font-size: 2rem;
+        }
+        .citytemperature, .temperature{
+            position:relative;
+            top:10px
+        }
+        
+        .pokemon{
+            border:10px solid rgb(5, 29, 168);
+            width:400px;
+            height:550px;
+            padding:20px;
+            display:flex;
+            flex-direction:column;
+            text-align:center;
+            font-family: arial;
+            background:white;  
+            border-radius:5%;
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.4)
+        }
+        .pokemonImage{
+            width:300px;
+            height:auto;            
+            object-fit: cover;
+        }
+        .imageContainer{            
+            height:400px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title, .cityTemperature{
+            font-family:'Press Start 2P';
+            font-size:1.1rem;
+            
+        }
+        .pokemonName{
+            color: rgb(13, 48, 150);
+            font-size:1.3rem;
+            font-weight:bold;
+            position:relative;
+            top:10px;
+            font-family:'Press Start 2P'
+        }
+        .temperature, .rain{
+            font-family:'Press Start 2P';
+            margin:auto;
+            font-weight:bold;
+            color: rgb(13, 48, 150);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="city">Enter the city name to search for the pokemon!</label>
+        <input type="text" id="city" name="city" placeholder="City name">
+        <button id="search">Search</button>
+    </div>
+    <div class="pokemon">
+        <h1 class="title">Pokemon Name</h1>
+        <p class=pokemonName>&nbsp</p>      
+        <div class="imageContainer">
+            <img class="pokemonImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="">
+        </div>          
+        <h2 class='cityTemperature'>City Temperature</h2>
+        <p class="temperature">&nbsp</p>
+        <p class="rain" style="margin-top:20px">&nbsp</p>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
